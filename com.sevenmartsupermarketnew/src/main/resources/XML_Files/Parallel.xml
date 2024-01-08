@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="multipleTestSuite" thread-count="5" parallel="tests">
+	<listeners>
+
+		<listener class-name="com.sevenmartsupermarketnew.listeners.ExtentReporter"></listener>
+
+	</listeners>
+
+	<test name="Smoke Testing">
+
+		<classes>     
+
+			<class name="com.sevenmartsupermarketnew.tests.LoginTest"></class>
+
+			
+
+		</classes>
+
+	</test>
+
+	<test name="Regression Testing">
+
+		<classes>
+
+			<class name="com.sevenmartsupermarketnew.tests.ManageDeliveryBoyTest"></class>
+
+		</classes>
+
+	</test>
+
+	<test name="Regression Testing2">
+
+		<classes>
+
+			<class name="com.sevenmartsupermarketnew.tests.PushNotificationsTest"></class>
+
+		</classes>
+
+	</test>
+
+
+</suite> 

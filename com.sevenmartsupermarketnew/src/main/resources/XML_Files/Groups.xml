@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Group Execution" thread-count="3" parallel="tests">
+	<listeners>
+		<listener
+			class-name="com.sevenmartsupermarketnew.listeners.ExtentReporter"></listener>
+	</listeners>
+	<test name="smoke">
+		<group>
+			<run>
+				<include name="smoke"></include>
+			</run>
+		</group>
+		<classes>
+			<class name="com.sevenmartsupermarketnew.tests.PushNotificationsTest"></class>
+			<class name="com.sevenmartsupermarketnew.tests.ManageDeliveryBoyTest"></class>
+		</classes>
+
+	</test>
+	<test name="regression">
+		<groups>
+			<run>
+				<include name="regression"></include>
+			</run>
+		</groups>
+		<classes>
+			<class name="com.sevenmartsupermarketnew.tests.LoginTest"></class>
+		</classes>
+	</test>
+</suite> 

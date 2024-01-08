@@ -54,9 +54,9 @@ public class ManageDeliveryBoyTest extends Base {
 
 		manageDeliveryBoyPage.editDeliveryBoy("ShameenaPS");	
 
-//		manageDeliveryBoyPage.enterName("Rahul");
-//
-//		manageDeliveryBoyPage.clickOnUpdateButton();
+		manageDeliveryBoyPage.enterName("Rahul");
+
+		manageDeliveryBoyPage.clickOnUpdateButton();
 
 	}
 
@@ -74,7 +74,7 @@ public class ManageDeliveryBoyTest extends Base {
 
 		manageDeliveryBoyPage.clickOnManageDeliveryBoy();
 
-//		manageDeliveryBoyPage.clickOnCreateNewDeliveryBoy();
+		manageDeliveryBoyPage.clickOnCreateNewDeliveryBoy();
 
 		excelRead.setExcelFile("CreateDeliveryBoy", "Vaid Delivery Boy");
 
@@ -90,21 +90,21 @@ public class ManageDeliveryBoyTest extends Base {
 
 		String password=excelRead.getCellData(8, 5);
 
-	//	manageDeliveryBoyPage.sendDeliveryBoyData(name, email, phone, address, username, password);
+		manageDeliveryBoyPage.sendDeliveryBoyData(name, email, phone, address, username, password);
 
-		//List<String> actualData=manageDeliveryBoyPage.getDeliveryBoyDetails();
+		List<String> actualData=manageDeliveryBoyPage.getDeliveryBoyDetails();
 
-		//softassert.assertEquals(actualData.get(0), name);
+		softassert.assertEquals(actualData.get(0), name);
 
-		//softassert.assertEquals(actualData.get(1), email);
+		softassert.assertEquals(actualData.get(1), email);
 
-		//softassert.assertEquals(actualData.get(2), phone);
+		softassert.assertEquals(actualData.get(2), phone);
 
 	//	softassert.assertEquals(actualData.get(3), address);
 
-//		softassert.assertEquals(actualData.get(4), username);
-//
-//		softassert.assertTrue(manageDeliveryBoyPage.isSuccessMessageAlertDisplayed());
+		softassert.assertEquals(actualData.get(4), username);
+
+		softassert.assertTrue(manageDeliveryBoyPage.isSuccessMessageAlertDisplayed());
 
 		softassert.assertAll();
 
